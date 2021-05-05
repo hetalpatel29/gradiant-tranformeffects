@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    margin: 0px 0px;
+}
+
+.box {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    background: repeating-radial-gradient(olive, green, yellow);
+    perspective: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.subbox {
+    height: 300px;
+    width: 300px;
+    background-image: url(../image/image1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box:hover .subbox {
+    animation: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotatex(0deg);
+    }
+    50% {
+        transform: rotatex(100deg);
+    }
+    50% {
+        transform: rotatex(200deg);
+    }
+    100% {
+        border-radius: 50%;
+        transform: rotatex(360deg);
+    }
+}
+
+.box1 {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    background: linear-gradient(to bottom right, red, yellow);
+    perspective: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subbox1 {
+    height: 200px;
+    width: 200px;
+    background-image: url(../image/image1.jpg);
+    border-radius: 2% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box1:hover .subbox1 {
+    animation: rotate1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(100deg);
+    }
+    50% {
+        transform: rotate(200deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
